@@ -1,11 +1,5 @@
 
-// Velký, zbytečný a blokující JS
-function heavyCalc(){ for(let i=0;i<1e7;i++){} }
-setTimeout(heavyCalc, 0);
-
-const unusedLibrary = (() => {
-  function logMany(){
-    for (let i=0;i<5000;i++){ console.log("debug", i); }
-  }
-  return { logMany };
-})();
+document.addEventListener('DOMContentLoaded',()=>{
+  const form=document.querySelector('form');
+  if(form){form.addEventListener('submit',e=>{e.preventDefault();alert('Díky! (Simulace)')});}
+});
